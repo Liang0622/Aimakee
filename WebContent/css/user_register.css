@@ -1,0 +1,58 @@
+
+.normalInput{
+	float: left;
+	position: relative;
+	display: inline-block;
+	padding: 0px 10px;
+	width: 245px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	border: 1px solid #dadada;
+	outline: none;color: #474747;
+	overflow: visible;
+	}
+.errorC{ 
+	margin-bottom: 10px;
+	border:1px solid #B3B3B3;
+	color: red;
+	}
+.formLine{
+	color: #d9d9d9;
+	height: 30px;
+	display: inline-block;
+	border-left: 1px solid #dadada;
+	position: absolute;
+	right: 100px;
+	top: 0px;}
+#getKey{
+	width: 80px;
+	border: none;
+	outline: none;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	position: absolute;
+	right: 10px;
+	top: 0px;}
+.mainForm{
+	margin-top: 100px;
+	width: 343px;
+	margin: 100px auto 0px;
+	overflow: hidden;
+	}
+.normalInput input{
+	font-size: 16px;
+	width: 60%;
+	padding: 14px 0;
+	height: 22px;
+	}
+.kapkey{
+	width: 50px;
+	border: none;
+	outline: none;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+}
+	

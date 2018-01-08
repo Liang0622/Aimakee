@@ -1,0 +1,17 @@
+.code{
+	margin:0 0 0 10px;
+	display:inline-block;
+	height:30px;
+	width:70px;
+	border:1px solid red;
+	text-align: center;
+	line-height: 30px
+	
+}
+.log_code>input{
+	margin:0 0 5px 50px;
+	display:inline-block;
+	height:24px;
+	width:100px;
+	border:1px solid red
+}

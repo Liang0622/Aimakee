@@ -1,0 +1,117 @@
+/*用户登录页*/
+.align_left { text-align:left!important; }
+.align_right { text-align:right!important; }
+.align_center { text-align:center!important; }
+
+.login_con {border:1px solid #e4e4e4; background:#f5f5f5; overflow:hidden; width:940px; _padding-bottom:50px;}
+.login_con .login_left{margin:48px 0px 52px 28px; float:left;}
+.login_con .login_title{width:426px; border-bottom:1px dashed #666; font-size:18px; height:38; line-height:38px; color:#343434;}
+.login_con .login_form {margin-left:124px; width:304px; }
+.login_form label {float:left; display:block;}
+.login_form .log_txt{vertical-align:middle;}
+.login_form .log_txt .txt{ vertical-align:middle; *vertical-align:super;}
+.login_form .log_pass .txt{ vertical-align:middle; *vertical-align:super;}
+.login_form .log_txt input{height:24px; width:194px; margin:18px 0px 10px; border:1px solid #a1181f;}
+.login_form .log_pass input{height:24px; width:194px;  border:1px solid #a1181f;}
+.login_form .checkbox {height:43px;_height:33px; line-height:43px; margin-left:47px; vertical-align:middle; _margin-top:10px;}
+.login_form .checkbox input{margin-right:10px; vertical-align:middle; _vertical-align:baseline;}
+.login_form .m_pass{}
+.login_btn{margin-left:47px;background:url(../images/user_login_bg.jpg) no-repeat; width:92px; height:31px!important; border:none!important;}
+
+.login_con .login_right{margin:48px 0px 52px 54px; float:left;}
+.login_con .login_title1{width:261px; border-bottom:1px dashed #666; font-size:18px; height:38; line-height:38px; color:#343434;}
+.login_con .login_r_con{padding:10px 0 0 5px;}
+.login_con .login_r_con p{width:227px; line-height:27px;}
+.login_con .login_r_con p a{color:#a1181f;}
+.color2{color:#a1181f;}
+
+
+.login_con .login_left1{ width:630px; margin:40px 12px 40px 40px; float:left;}
+.login_left1 .login_title{width:630px; border-bottom:1px dashed #666; font-size:18px; height:38; line-height:38px; color:#343434;}
+.login_con .login_form1 {width:540px; margin-left:90px; padding-top:15px;}
+.login_con .login_right1{ width:151px; float:left; border:1px solid #B3B3B3;margin:58px 40px 40px 0px; padding:14px 32px;}
+.inputBg{background:url(../images/user_txt_bg.jpg) repeat-x left top;border:1px solid #B3B3B3;height:22px;}
+.login_con .login_form1 td{font-size:12px;line-height:350%;*line-height:300%; padding-right:5px;}
+.us_Submit_reg{background:url(../images/user_register_btn.jpg) no-repeat; width:114px; height:34px; border:none;}
+.login_con .login_right1 p{ line-height:24px; background:url(../images/user_register_icon1.jpg) no-repeat 0 8px; padding-left:14px;}
+
+/*个人中心样式*/
+.user_content { width:940px; overflow:hidden; }
+.user_content .con_left { width:209px; margin:0 9px 22px 0; border:1px solid #a1181f; float:left; }
+.user_content .con_right { width:716px; margin-bottom:22px; border:1px solid #a1181f; float:left; }
+.pad_border { border:4px solid #fff5f4; }
+.user_menu { margin:0 11px; }
+.user_menu li { width:149px; height:30px; line-height:30px; padding-left:30px; border-bottom:1px dashed #dddddd; background:url(../images/user_icon.jpg) no-repeat; display:block; }
+.user_menu li.user_icon1 { background-position:0px 0px; }
+.user_menu li.user_icon2 { background-position:0px -31px; }
+.user_menu li.user_icon3 { background-position:0px -62px; }
+.user_menu li.user_icon4 { background-position:0px -93px; }
+.user_menu li.user_icon5 { background-position:0px -124px; }
+.user_menu li.user_icon6 { background-position:0px -155px; }
+.user_menu li.user_icon7 { background-position:0px -186px; }
+.user_menu li.user_icon8 { background-position:0px -216px; }
+.user_menu li.user_icon9 { background-position:0px -247px; }
+.user_menu li a { display:block; color:#323232; background:url(../images/user_icon5.jpg) no-repeat 135px 8px;}
+.user_menu li a.hot { display:block; font-weight:bold; color:#a0191d; background:url(../images/user_icon4.jpg) no-repeat 135px 8px;}
+.user_logout { padding:6px 8px 6px 105px;}
+.user_logout img { display:block; cursor:pointer; }
+/*个人中心右边样式*/
+.user_con { width:694px; padding:8px; overflow:hidden; }
+.user_con p { line-height:28px; }
+.user_con .user_pub {width:652px; height:12px; padding:12px 20px; border:1px solid #a1675b; background-color:#fff5f4; }
+.user_con .array2 { width:694px; overflow:hidden; margin:50px 0px;  }
+.user_con .box1 { width:335px; margin-right:24px; float:left; }
+.user_con .box2 { width:335px; float:left; }
+.user_con .title { width:311px; height:26px; line-height:26px; padding-left:24px; font-weight:bold; color:#a11a20; background:url(../images/user_bg1.jpg) no-repeat;}
+.user_con .txt1 { color:#006cce; text-decoration:underline; }
+.subject {width:694px; background:#fff5f4; height:26px; line-height:26px; margin:3px 0; }
+.subject span { background:url(../images/user_bg2.jpg) no-repeat; font-weight:bold; color:#a0191f; padding-left:25px; }
+
+/*个人中心图片库*/
+.pic_box { width:682px; padding-left:12px; margin:10px 0 0 0; overflow:hidden;}
+.pic_box .pic_con { float:left; height:190px; margin-right:10px; overflow:hidden; position:relative;}
+.pic_box .pic_con .pic_img { width:150px; height:140px; padding:4px; border:1px solid #e4e4e4; }
+.pic_box .pic_con .pic_name { padding:3px; line-height:20px;}
+.pic_box .pic_con .pic_name a {padding-left:8px;}
+.pic_box .pic_del { position:absolute; top:127px; left:95px; }
+
+.pic_box2 { width:694px; overflow:hidden; }
+.pic_box2 .pic_operate { float:left; padding:10px; height:12px; }
+.pic_btn { height:22px\9; }
+.pic_file {width:175px\9; +width:200px; height:22px\9; }
+.page2 { float:right; padding:10px;  } 
+.page2 a { display:block; float:left; margin-right:3px; padding:1px 5px; border:1px solid #dddddd; }
+.page2 .prev , .page2 .next {display:block; float:left; padding:1px 5px; _padding:2px 5px 1px; color:#a51922!important; }
+.page2 .text {display:block; float:left; padding:1px 5px; margin-right:3px; }
+.page2 a.current { border:1px solid #a51922!important; background:#edd0d2; color:#a51922!important; }
+
+/*个人中心地址薄*/
+.user_con table { margin:5px 5px; background:#FFF; }
+.user_con table td, .flowBox table th { border:1px solid #ddd; padding:6px; text-align:center; color:#404040; vertical-align:middle; }
+.inputBg { background:url(../images/user_txt_bg.jpg) repeat-x left top; border:1px solid #B3B3B3; height:22px; }
+.bnt_blue_2{ background:url(../images/cart_btn3.jpg) no-repeat; width:151px; height:31px; border:none; font-size:12px; cursor:pointer; }
+
+/*个人中心我的留言*/
+.tb1 td, .tb1 th{ border:none!important; }
+.radio1 input { margin:0 6px!important; }
+.recom_box1 { padding:5px 25px; }
+.recom_box1 p{ line-height:20px!important; }
+.recom_txt1 a{ font-weight:bold; text-decoration:underline; color:#00F; }
+.com_title { font-weight:bold; padding-right:8px; } 
+.com_name { color:#00F!important; padding-right:8px;}
+
+/*个人中心我的评论*/
+.comment_box1 { width:694px; margin:15px 0; overflow:hidden; }
+.comment_box1 .f_l { float:left; width:684px; padding:5px; }
+.comment_box1 .f_l span { display:block; float:left; }
+.comment_box1 .f_l a{ display:block; float:right; }
+.f6 { color:#900!important; text-decoration:underline!important; }
+.comment_con { width:650px; padding:5px 39px 5px 4px; border-bottom:1px dashed #900; } 
+.pagebar { float:right; }
+.pagebar span , .pagebar a { display:block; float:left; padding:5px; }
+.page_now { font-weight:bold; color:#F00!important; }
+.pagebar .prev, .pagebar .next { _padding-top:7px!important;  }
+
+
+
+
