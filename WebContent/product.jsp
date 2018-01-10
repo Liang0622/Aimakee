@@ -20,7 +20,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link type="text/css" rel="stylesheet" href="css/common.css" />
 <link type="text/css" rel="stylesheet" href="css/product.css" />
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/product.js"></script>
 <title>爱玛克登录页</title>
 </head>
 <body onload="margin_top_height(0);">
@@ -31,7 +33,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="location"><span class="icon"></span>你现在的位置：<a href="#">爱玛克</a>&gt;<a class="current_a" href="#">登录</a> </div>
  	<div class="pro_content">
     	<div class="con_left">
-        	<div class="menu_top"><span>杯子影像</span></div>
+        	<div class="menu_top"><span >杯子影像</span></div>
         	<div class="pro_menu">
                 <ul class="menu_con">
                 	<li><a href="#" title="">白瓷杯<span>(8888)</span></a></li>
@@ -52,14 +54,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="page1">
                     <span>1/100</span>
                     <a href="#"><b class="pre_icon"></b>上一页</a><a href="#"><b class="next_icon"></b>下一页</a>
-                </div>			
+                </div>	
             </div>
             <div id="pro_box" class="box_3">
             	<ul class="pro_con1">
-                	<li class="pro_img"><a href="#" title=""><img src="images/product_pic1.jpg" alt="产品图片" /></a></li>
-                    <li class="pro_name"><a href="#" title="" >产品名称</a></li>
+                	<li class="pro_img"><a href="product_detail.jsp" title=""><img src="images/product_pic1.jpg" alt="产品图片" /></a></li>
+                    <li class="pro_name"><a href="product_detail.jsp" title="" >产品名称</a></li>
                     <li class="pro_price">单价:<span class="font_1">￥4444</span> 会员价:<span>￥8845</span></li>
-                    <li class="pro_custom"><a href="#" title=""><img src="images/product_btn5.jpg" width="80" height="18" alt="我要定制" /></a></li>
+                    <li class="pro_custom"><a href="product_detail.jsp" title=""><img src="images/product_btn5.jpg" width="80" height="18" alt="我要定制" /></a></li>
                 </ul>
             	<ul class="pro_con1">
                 	<li class="pro_img"><a href="#" title=""><img src="images/product_pic1.jpg" alt="产品图片" /></a></li>

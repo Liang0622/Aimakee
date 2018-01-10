@@ -8,7 +8,7 @@
         </div>
         <ul id="menu_ul" class="hide"  onmouseout="menu_style2(1)" onmouseover="menu_style2(2)">
         	<li id="foucs1" onmouseover="view_menu(1)" onmouseout="hide_menu(1)" >
-            	<div><a href="#">杯子影像<b class="a_icon1"></b></a><span>白瓷杯 变色杯</span></div>
+            	<div><a href="#">杯子影像<b class="a_icon1"></b></a></div>
                 <ul>
                 	<li class="one"><a href="#">变色杯<b class="a_icon2"></b></a></li>
                     <li><a href="#">陶瓷杯<b class="a_icon2"></b></a></li>
@@ -16,7 +16,7 @@
                 </ul>
             </li>
         	<li id="foucs2" onmouseover="view_menu(2)" onmouseout="hide_menu(2)" >
-            	<div><a href="#">杯子影像<b class="a_icon1"></b></a><span>白瓷杯 变色杯</span></div>
+            	<div><a href="#">杯子影像<b class="a_icon1"></b></a></div>
                 <ul>
                 	<li class="one"><a href="#">变色杯<b class="a_icon2"></b></a></li>
                     <li><a href="#">陶瓷杯<b class="a_icon2"></b></a></li>
@@ -24,7 +24,7 @@
                 </ul>
             </li>
         	<li id="foucs3" onmouseover="view_menu(3)" onmouseout="hide_menu(3)" >
-            	<div><a href="#">杯子影像<b class="a_icon1"></b></a><span>白瓷杯 变色杯</span></div>
+            	<div><a href="#">杯子影像<b class="a_icon1"></b></a></div>
                 <ul>
                 	<li class="one"><a href="#">变色杯<b class="a_icon2"></b></a></li>
                     <li><a href="#">陶瓷杯<b class="a_icon2"></b></a></li>
@@ -32,7 +32,7 @@
                 </ul>
             </li>
         	<li id="foucs4" onmouseover="view_menu(4)" onmouseout="hide_menu(4)" >
-            	<div><a href="#">杯子影像<b class="a_icon1"></b></a><span>白瓷杯 变色杯</span></div>
+            	<div><a href="#">杯子影像<b class="a_icon1"></b></a></div>
                 <ul>
                 	<li class="one"><a href="#">变色杯<b class="a_icon2"></b></a></li>
                     <li><a href="#">陶瓷杯<b class="a_icon2"></b></a></li>

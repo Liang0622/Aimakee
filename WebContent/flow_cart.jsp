@@ -21,8 +21,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link type="text/css" rel="stylesheet" href="css/common.css" />
 <link type="text/css" rel="stylesheet" href="css/flow.css" />
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
-
 </head>
 <body onload="margin_top_height();">
 <div id="wrap">

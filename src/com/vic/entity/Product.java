@@ -11,6 +11,13 @@ public class Product {
 	private int categoryLevel3Id;//三级分类
 	private String fileName;//文件名称
 	private int isDelete;//是否下架
+	private Page page;//当前页的信息
+	public Page getPage() {
+		return page;
+	}
+	public void setPage(Page page) {
+		this.page = page;
+	}
 	/**
 	 * 无参构造
 	 */

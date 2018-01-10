@@ -20,13 +20,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
 <link type="text/css" rel="stylesheet" href="css/common.css" />
 <link type="text/css" rel="stylesheet" href="css/flow.css" />
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 <title>爱玛克登录页</title>
 </head>
 <body onload="margin_top_height();">
 <div id="wrap">
-<%@ include file="elements/top.jsp" %>
-<%@ include file="elements/search.jsp" %>
+<%@ include file="../elements/top.jsp" %>
+<%@ include file="../elements/search.jsp" %>
 <div class="main">
     <div class="location"><span class="icon"></span>你现在的位置：<a href="#">爱玛克</a>&gt;<a class="current_a" href="#">登录</a> </div>
     <form action="flow.php" method="post" name="theForm" id="theForm" onsubmit="return checkOrderForm(this)">
@@ -176,7 +177,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>        
     </form>
 </div>
-<%@ include file="elements/bottom.jsp" %>
+<%@ include file="../elements/bottom.jsp" %>
 </div>
 </body>
 </html>

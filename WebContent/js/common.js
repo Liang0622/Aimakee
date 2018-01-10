@@ -1,28 +1,13 @@
-	function menu_style() {
+	/*function menu_style() {
 		var id = document.getElementById("product_class");
 		var menu_id = document.getElementById("menu_ul");
 		if (menu_id.className == 'menu_ul') {
 			menu_id.className = 'hide';
 		} else {
 			menu_id.className = 'menu_ul';
-		}
-	}
-	
-/*	function menu_style2() {
-		var id = document.getElementById("product_class");
-		var menu_id = document.getElementById("menu_ul");
-		document.getElementById("menu").className = 'menu';
-		
-		if (menu_id.className == 'menu_ul') {
-			menu_id.className = 'hide';
-			document.getElementById("menu").className = 'menu2';	
-			document.getElementById("icon1").style.backgroundPosition = '0px 2px';	
-		} else {
-			menu_id.className = 'menu_ul';
-			document.getElementById("menu").className = 'menu';
-			document.getElementById("icon1").style.backgroundPosition = '0px -10px';
 		}
 	}*/
+	
 	function menu_style2(i) {		//产品菜单鼠标经过效果
 		var id = document.getElementById("product_class");
 		var menu_id = document.getElementById("menu_ul");
@@ -78,9 +63,14 @@
 	}	
 	function view_menu(i) {
 		document.getElementById("foucs"+i).className = 'foucs';
+		//鼠标滑过时发送Ajax请求显示下拉框数据
+		var $view_ul=$("#view_ul"+i);
+		$view_ul.load("viewMenuServlet","opr="+i);
+		
 	}
+	
 	function hide_menu(i) {
-		document.getElementById("foucs"+i).className = '';
+		document.getElementById("foucs"+i).className ='';
 	}
 	
 	function product_style(i){
@@ -97,7 +87,6 @@
 	
 	var rollText_k=4; //菜单总数
 	var rollText_i=1; //菜单默认值
-	//rollText_tt=setInterval("rollText(1)",8000);	//按指定的时间来运行函数
 	function rollText(a){
 		clearInterval(rollText_tt);
 		rollText_tt=setInterval("rollText(1)",8000);
@@ -108,17 +97,18 @@
 		if (rollText_i==0){
 			rollText_i=rollText_k;
 		}
-		//alert(i)
 		for (var j=1; j<=rollText_k; j++){
 			document.getElementById("rollTextMenu"+j).style.display="none";
 		}
 		document.getElementById("rollTextMenu"+rollText_i).style.display="block";
-		//document.getElementById("pageShow").innerHTML = rollText_i+"/"+rollText_k;
 	} 
-//	ajax实现三级联动
-	
+//	ajax实现一级菜单目录的显示
 $(function(){
 	$("#product_class").mouseover(function(){
-		
+		$("#menu_ul").load("menuServlet");
 	})
 })
+//三级目录展示到product页面
+function showProduct(i){
+	alert(666);
+}

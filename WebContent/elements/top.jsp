@@ -6,7 +6,7 @@
         <li class="my_account"><span>
         <c:choose>
     	<c:when test="${!islogin}">
-    		<a href="user.jsp" > <c:out value="${sessionScope.user.userName}"   /> </a>
+    		<a href="/Aimakee/loginUserPages/user.jsp" > <c:out value="${sessionScope.user.userName}"   /> </a>
     	</c:when>
     	<c:otherwise>
     		<a href="user_login.jsp" > <c:out value="请登录"/> </a>
@@ -20,13 +20,13 @@
     </ul>
     <ul id="my_account" class="my_account2" onmouseover="view_account()" onmouseout="hide_account()">
         <li class="my_icon"><a href="#">我的爱玛客</a><span></span></li> 
-        <li><a href="user_order.jsp#user_order">我的订单</a></li>
-        <li><a href="user_credit">我的积分</a></li>
-        <li><a href="#">我的优惠券</a></li> 
-        <li><a href="#">快递查询</a></li>         
+        <li><a href="/Aimakee/loginUserPages/user_order.jsp#user_order">我的订单</a></li>
+        <li><a href="/Aimakee/loginUserPages/user_credit.jsp">我的积分</a></li>
+        <li><a href="/Aimakee/loginUserPages/user_coupon.jsp">我的优惠券</a></li> 
+        <li><a href="/Aimakee/loginUserPages/user_express.jsp">快递查询</a></li>         
     </ul>       
     <div id="logo">
-        <div class="logo"><a href="/" title="首页"><img src="images/logo.jpg" alt="爱玛客首页" width="224" height="35" /></a></div>
+        <div class="logo"><a href="index.jsp" title="首页"><img src="images/logo.jpg" alt="爱玛客首页" width="224" height="35" /></a></div>
         <div class="contact_phone"><img src="images/contact_phone.jpg" alt="爱玛客首页" width="233" height="17" /></div>
     </div>
     <div id="nav">

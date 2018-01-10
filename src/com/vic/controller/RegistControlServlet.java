@@ -31,25 +31,25 @@ public class RegistControlServlet extends HttpServlet {
 		String sendCode=req.getSession().getAttribute("sendCode")+"";
 		System.out.println(sendCode);
 		
-		String code=req.getParameter("phoneCode");
+		String code=req.getParameter("inCode");
 		System.out.println(code);
 		//实例化一个用户
 		User user=new User();
-		
+		String pwd=req.getParameter("password");
+		try {
+			pwd=Md5Util.getEncryptedPwd(pwd);
+		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		}
+		user.setPassword(pwd);//添加用户密码
 		user.setUserName(req.getParameter("username"));//添加用户名
 		user.setUserEmail(req.getParameter("email"));//添加用户邮箱
-		user.setPassword(req.getParameter("password"));//添加用户密码
 		user.setUserQQ(req.getParameter("userQQ"));//用户QQ号
 		user.setMobilePhone(req.getParameter("mobilePhone"));//手机
 		user.setPasswordQuestion(req.getParameter("passwordQuestion"));//密码提示问题
-		try {
-			user.setPasswordAnswer(Md5Util.getEncryptedPwd(req.getParameter("passwordAnswer")));
-		} catch (NoSuchAlgorithmException e) {
-			e.printStackTrace();
-		}//密码问题答案
+		user.setPasswordAnswer(req.getParameter("passwordAnswer"));//密码提示答案
 		
 		UserService usi=new UserServiceImpl();
-		
 		if(sendCode.equals(code)){
 			if(usi.addUser(user)){
 				System.out.println("注册成功！");

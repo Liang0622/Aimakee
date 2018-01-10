@@ -58,4 +58,3 @@
         <p>Powered by <a href="#" class="a_2">DODI</a></p>
     </div>
 </div>
-</div>

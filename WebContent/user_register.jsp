@@ -22,8 +22,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <link type="text/css" rel="stylesheet" href="css/common.css" />
 <link type="text/css" rel="stylesheet" href="css/user.css" />
 <link type="text/css" rel="stylesheet" href="css/user_register.css" />
-<script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript" src="js/jquery.validate.js"></script>
 <script type="text/javascript" src="js/user_register.js"></script>
 <title>爱玛克登录页</title>
@@ -103,7 +103,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </tr>
                         <tr>
                         	<td colspan="2"><div class="normalInput errorC">
-							<input class="kapkey" type="text" maxlength="6" placeholder="验证码">
+							<input class="kapkey" type="text" maxlength="6" name="inCode" placeholder="验证码">
 							<span class="formLine"></span>
 							<span class="linkABlue" id="getKey">获取验证码</span>
 						</div></td>
@@ -134,6 +134,5 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </div>
 <%@ include file="elements/bottom.jsp" %>
 </div>
-
 </body>
 </html>

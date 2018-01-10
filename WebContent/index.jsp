@@ -4,7 +4,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML>
 <html>
   <head>
     <base href="<%=basePath%>">
@@ -18,9 +18,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link type="text/css" rel="stylesheet" href="css/common.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="css/common.css" />
 <link type="text/css" rel="stylesheet" href="css/index.css" />
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 <title>爱玛克首页</title>
 </head>
