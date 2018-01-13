@@ -6,8 +6,12 @@ import com.vic.entity.Page;
 import com.vic.entity.Product;
 
 public interface ProductService {
-	//根据三级类别id和当前页信息，查询相关记录
-	List<Product> findAllByPageAndCate3Id(Page page,int cate3Id);
-	//根据三级类别id查询总记录数
-	int getCountByCate3Id(int cate3Id);
+	//根据类别id和目录级别查询商品总数
+	int getCountByCateLevelId(int categoryId, int level);
+	//根据类别id和目录级别查询商品
+	List<Product> findAllByPageAndCateId(Page page, int categoryId,int level);
+	//获得所有商品的总数
+	int getAllProductCount();
+	//获得素有商品的集合
+	List<Product> findAllProduct(Page page);
 }

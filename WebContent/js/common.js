@@ -1,13 +1,3 @@
-	/*function menu_style() {
-		var id = document.getElementById("product_class");
-		var menu_id = document.getElementById("menu_ul");
-		if (menu_id.className == 'menu_ul') {
-			menu_id.className = 'hide';
-		} else {
-			menu_id.className = 'menu_ul';
-		}
-	}*/
-	
 	function menu_style2(i) {		//产品菜单鼠标经过效果
 		var id = document.getElementById("product_class");
 		var menu_id = document.getElementById("menu_ul");
@@ -108,7 +98,4 @@ $(function(){
 		$("#menu_ul").load("menuServlet");
 	})
 })
-//三级目录展示到product页面
-function showProduct(i){
-	alert(666);
-}
+

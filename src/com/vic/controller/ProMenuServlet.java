@@ -16,8 +16,8 @@ import com.vic.entity.ProductCategory;
 import com.vic.service.productcategory.ProductCategoryService;
 import com.vic.service.productcategory.mpl.ProductCategoryServiceImpl;
 @SuppressWarnings("serial")
-@WebServlet("/thirdMenuServlet")
-public class ThirdMenuServlet extends HttpServlet {
+@WebServlet("/proMenuServlet")
+public class ProMenuServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,15 +28,17 @@ public class ThirdMenuServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		PrintWriter out=resp.getWriter();
 		ProductCategoryService pcsi=new ProductCategoryServiceImpl();
-		String parentId=req.getParameter("opr");
 		
-		int ptId=Integer.parseInt(parentId);
-		int count=0;
-		//获得三级级目录的集合
-		List<ProductCategory> pcleve3s=pcsi.findByLevel(3, ptId);
+		String cId=req.getParameter("categoryId");
+		String lev=req.getParameter("level");
+		
+		int cateId=Integer.parseInt(cId);
+		int level=Integer.parseInt(lev);
+		//获相应目录的集合
+		List<ProductCategory> procateList=pcsi.findByLevel(level, cateId);
 		//返回JSON数据
 		Gson gson=new Gson();
-		String json=gson.toJson(pcleve3s);
+		String json=gson.toJson(procateList);
 		out.print(json);
 		out.flush();
 		out.close();

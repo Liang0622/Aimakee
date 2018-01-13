@@ -7,7 +7,7 @@ package com.vic.entity;
 public class Page {
 	//定义分页的四要素
 	private int totleCount;//数据库中的总记录数
-	private int pageSize=16;//页大小
+	private final int pageSize=8;//页大小
 	private int pageCount;//总页数
 	private int currentPage;//当前页
 	
@@ -18,7 +18,6 @@ public class Page {
 	public Page                                                                                                                                                                                                                                (int totleCount, int pageSize, int pageCount, int currentPage) {
 		super();
 		this.totleCount = totleCount;
-		this.pageSize = pageSize;
 		this.pageCount = pageCount;
 		this.currentPage = currentPage;
 	}
@@ -35,15 +34,14 @@ public class Page {
 		return pageSize;
 	}
 
-	public void setPageSize(int pageSize) {
-		this.pageSize = pageSize;
-	}
-
 	public int getPageCount() {
-		pageCount=this.totleCount/this.pageSize==0?
+		
+		return pageCount;
+	}
+	public void setPageCount() {
+		pageCount=this.totleCount%this.pageSize==0?
 				this.totleCount/this.pageSize:
 					this.totleCount/this.pageSize+1;
-		return pageCount;
 	}
 
 	public int getCurrentPage() {

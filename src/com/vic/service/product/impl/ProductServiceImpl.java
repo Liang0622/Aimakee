@@ -10,14 +10,27 @@ import com.vic.service.product.ProductService;
 
 public class ProductServiceImpl implements ProductService{
 	ProductDao pdi=new ProductDaoImpl();
+
 	@Override
-	public List<Product> findAllByPageAndCate3Id(Page page, int cate3Id) {
-		return pdi.getAllByPageAndcate3Id(cate3Id, page);
+	public int getCountByCateLevelId(int categoryId, int level) {
+		return pdi.getCountByCateLevelId(categoryId,level);
 	}
 
 	@Override
-	public int getCountByCate3Id(int cate3Id) {
-		return pdi.getTotleCountByCate3Id(cate3Id);
+	public List<Product> findAllByPageAndCateId(Page page, int categoryId, int level) {
+		return pdi.findAllByPageAndCateId(page, categoryId, level);
 	}
-	
+
+
+	@Override
+	public List<Product> findAllProduct(Page page) {
+		return pdi.findAllProduct(page);
+	}
+
+	@Override
+	public int getAllProductCount() {
+		// TODO Auto-generated method stub
+		return pdi.getTotleCount();
+	}
+
 }

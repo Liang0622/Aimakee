@@ -27,29 +27,37 @@ public class ProductShowByPageServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		ProductService psi=new ProductServiceImpl();
-		String curPage=req.getParameter("currentPage");
-		int currentPage=Integer.parseInt(curPage);
-		String opr1=req.getParameter("opr1");
-		String opr2=req.getParameter("opr2");
-		String opr3=req.getParameter("opr3");
-		if(opr1!=null) {
-			
-		}else if(opr2!=null) {
-			
-		}else if(opr3!=null) {
-			int cate3Id=Integer.parseInt(opr3);
-			Page page=new Page();
-			int totleCount=psi.getCountByCate3Id(cate3Id);
+		String curPage=req.getParameter("curPage");
+		int currentPage=Integer.parseInt(curPage);//当前页码
+		String cId=req.getParameter("categoryId");
+		String lev=req.getParameter("level");
+		List<Product> products;
+		Page page=new Page();
+		if(lev==null||lev.trim().equals("")) {
+			//查询所有商品的记录
+			int totleCount=psi.getAllProductCount();
 			page.setTotleCount(totleCount);
 			page.setCurrentPage(currentPage);
-			List<Product> products=psi.findAllByPageAndCate3Id(page, cate3Id);
-			Gson gson=new Gson();
-			String json=gson.toJson(products);
-			System.out.println(json);
-			PrintWriter out=resp.getWriter();
-			out.print(json);
-			out.close();
+			page.setPageCount();
+			products=psi.findAllProduct(page);
+			products.get(0).setPage(page);
+		}else {
+			
+			int categoryId=Integer.parseInt(cId);//目录id
+			int level=Integer.parseInt(lev);//目录级别
+			
+			int totleCount=psi.getCountByCateLevelId(categoryId,level);
+			page.setTotleCount(totleCount);
+			page.setCurrentPage(currentPage);
+			page.setPageCount();
+			products=psi.findAllByPageAndCateId(page, categoryId,level);
+			products.get(0).setPage(page);
 		}
+		Gson gson=new Gson();
+		String json=gson.toJson(products);
+		System.out.println(json);
+		PrintWriter out=resp.getWriter();
+		out.print(json);
+		out.close();
 	}
-
 }

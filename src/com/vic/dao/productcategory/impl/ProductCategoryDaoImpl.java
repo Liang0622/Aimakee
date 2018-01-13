@@ -15,7 +15,7 @@ public class ProductCategoryDaoImpl extends BaseDao implements ProductCategoryDa
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	//类别id和自己目录级别得到所有记录
 	@Override
 	public List<ProductCategory> findByLevel(int type ,int parentId) {
 		List<ProductCategory> productCategorys=new ArrayList<ProductCategory>();

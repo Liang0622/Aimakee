@@ -32,7 +32,6 @@ public class ViewMenuServlet extends HttpServlet {
 		String pcId=req.getParameter("pcId");
 		if(parentId!=null) {
 			int ptId=Integer.parseInt(parentId);
-			int count=0;
 			//获得二级目录的集合
 			List<ProductCategory> pcleve2s=pcsi.findByLevel(2, ptId);
 			//遍历二级目录
@@ -42,9 +41,8 @@ public class ViewMenuServlet extends HttpServlet {
 			Iterator<ProductCategory> items=pcleve2s.iterator();
 			while(items.hasNext()) {
 				ProductCategory pc=items.next();
-				pc2Html.append("<li><a href='product.jsp?pcId="+pc.getId()+"' >"+pc.getName()+"<b class='a_icon2'></b></a></li>");
+				pc2Html.append("<li><a href='product.jsp?pcId2="+pc.getId()+"' >"+pc.getName()+"<b class='a_icon2'></b></a></li>");
 			}
-		
 			out.print(pc2Html.toString());
 			out.flush();
 			out.close();

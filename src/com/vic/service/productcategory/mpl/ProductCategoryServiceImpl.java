@@ -16,9 +16,9 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
 	}
 
 	@Override
-	public List<ProductCategory> findByLevel(int type, int parentId) {
+	public List<ProductCategory> findByLevel(int type, int cateId) {
 		
-		return pcdi.findByLevel(type, parentId);
+		return pcdi.findByLevel(type, cateId);
 	}
 
 	@Override

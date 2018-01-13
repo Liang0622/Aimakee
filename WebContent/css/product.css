@@ -49,15 +49,12 @@
 /*产品列表分页样式*/
 .box_4 { width:722px; overflow:hidden;}
 .page { float:right; margin-right:15px; height:30px; line-height:30px; display:inline;}
-.page .prev_disabled { padding:0px 5px 0 15px; position:relative; display:block; float:left; height:19px; line-height:19px; color:#cccccc; margin-right:3px;border:1px solid #cccccc; }
-.page .next { padding:0px 15px 0 5px; position:relative; display:block; float:left; height:19px; line-height:19px; color:#a0191f; margin-right:3px; border:1px solid #cccccc; }
+.page>span { padding:0px 5px ; position:relative; display:block; float:left; height:19px; line-height:19px; color:#a0191f; margin-right:3px;border:1px solid #cccccc; }
 .page b { position:absolute; background:url(../images/product_icon2.jpg) no-repeat; height:9px; width:9px; display:block; font-size:0;} 
-.page .prev_disabled b { background-position:0px -18px; left:6px; top:5px; }
-.page .next b { background-position:0px -9px; left:43px; top:5px; }
 .page a {color:#a0191f!important;  display:block; float:left; height:19px; line-height:19px; padding:0px 7px; margin-right:3px;border:1px solid #cccccc;}
-.page span { display:block; float:left; height:19px; line-height:19px;}
-.page span input {height:19px; line-height:19px;}
-.page span .page_txt{ height:14px; line-height:14px; width:30px;}
+.page div { display:block; float:left; height:19px; line-height:19px;}
+.page div input {height:19px; line-height:19px;}
+.page div .page_txt{ height:14px; line-height:14px; width:30px;}
 .page .current { background:#ebd1d0;  border:1px solid #a1181f; }
 .page .text { color:#a0191f; font-weight:bold; margin-right:3px; }
 
