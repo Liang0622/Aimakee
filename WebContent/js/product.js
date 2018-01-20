@@ -65,12 +65,12 @@ $(function(){
 			}
 			$("#pro_box").append(
 					 "<ul class=\"pro_con1\">                                                                                                                         	 "
-	            	+"<li class=\"pro_img\"><a href=\"product_detail.jsp\" title=\"\"><img src=\"images/product_pic1.jpg\" alt=\"产品图片\" /></a></li>                        		"
-	                +"<li class=\"pro_name\"><a href=\"product_detail.jsp\" title=\"\" >"+$(data)[i].name+"</a></li>                                                                  		"
+	            	+"<li class=\"pro_img\"><a href='product_detailServlet?productId="+$(data)[i].id+"' title=\"\"><img src=\"images/product_pic1.jpg\" alt=\"产品图片\" /></a></li>                        		"
+	                +"<li class=\"pro_name\"><a href='product_detailServlet?productId="+$(data)[i].id+"' title=\"\" >"+$(data)[i].name+"</a></li>                                                                  		"
 	                +"<li class=\"pro_price\"></span> 会员价:<span>￥"+$(data)[i].price+"</span></li>                                                  			"
-	                +"<li class=\"pro_custom\"><a href=\"product_detail.jsp\" title=\"\"><img src=\"images/product_btn5.jpg\" width=\"80\" height=\"18\" alt=\"我要定制\" /></a></l\"i>	\""
+	                +"<li class=\"pro_custom\"><a href='product_detailServlet?productId="+$(data)[i].id+"' title=\"\"><img src=\"images/product_btn5.jpg\" width=\"80\" height=\"18\" alt=\"我要定制\" /></a></l\"i>	\""
 	                +"</ul>                                                                                                                                          	"
-			);                                                                                                                                                       
+			);  
 		})
 		$("#pageCount").text(pageCount);
 		$("a.current").text(currentPage);

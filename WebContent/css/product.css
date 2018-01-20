@@ -77,6 +77,12 @@
 .box5 .txt8 { background:#f7f7f7; }
 .box5 .txt8 input{margin:0px 10px 0 5px; }
 .box5 .btn1 {background:url(../images/product_btn6.jpg) no-repeat; width:127px; height:36px; border:none; cursor:pointer;}
+#cartButton{
+	margin-right:40px;
+	font-size:20px;
+	color:white;
+	background:url(../images/product_btn7.png) no-repeat; width:127px; height:36px; border:none; cursor:pointer;
+}
 .box5 .txt9 {text-align:center; margin-top:30px; _margin-top:40px; }
 
 /*下左边部份*/

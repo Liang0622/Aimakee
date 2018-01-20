@@ -34,10 +34,8 @@ public class PageResultUtil {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return list;
@@ -50,6 +48,9 @@ public class PageResultUtil {
 				t = clazz.newInstance(); // 通过反射的机制获取对象的实例
 				Field[] fields = clazz.getDeclaredFields();
 				for (Field f : fields) {
+					if(f.getName().equals("page")) {
+						continue;
+					}
 					f.setAccessible(true);
 					f.set(t, rs.getObject(f.getName()));
 				}

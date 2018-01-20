@@ -36,8 +36,11 @@ public class MenuServlet extends HttpServlet {
 			ProductCategory pcleve1=it1s.next();
 			String pcleve1Name=pcleve1.getName();
 			int pcleve1Id=pcleve1.getId();
-			levelHtml.append("<li id='foucs"+pcleve1Id+"' onmouseenter='view_menu("+pcleve1Id+")' onmouseleave='hide_menu("+pcleve1Id+")' >"
-					+ "<div><a href='product.jsp?pcId1="+pcleve1Id+"'>"+pcleve1Name+"<b class='a_icon1'></b></a></span></div><ul id='view_ul"+pcleve1Id+"'></ul></li>");
+			levelHtml.append(
+							"<li id='foucs"+pcleve1Id+"' onmouseenter='view_menu("+pcleve1Id+")' "
+							+ "onmouseleave='hide_menu("+pcleve1Id+")'>"
+							+ "<div><a href='product.jsp?pcId1="+pcleve1Id+"'>"+pcleve1Name+"<b class='a_icon1'></b></a>"
+							+ "</span></div><ul id='view_ul"+pcleve1Id+"'></ul></li>");
 		}
 		PrintWriter out=resp.getWriter();
 		out.print(levelHtml.toString());

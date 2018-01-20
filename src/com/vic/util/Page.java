@@ -1,4 +1,4 @@
-package com.vic.entity;
+package com.vic.util;
 /**
  * 分页的工具类
  * @author Liang

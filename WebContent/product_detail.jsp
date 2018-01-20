@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
@@ -22,6 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <link type="text/css" rel="stylesheet" href="css/product.css" />
 <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/product_detail.js"></script>
 <title>爱玛克登录页</title>
 </head>
 <body onload="margin_top_height();">
@@ -36,9 +38,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
         <form action="" method="post">
         <ul class="con_right">
-            <li class="title">神奇魔术变色杯</li>
-            <li>促&nbsp;&nbsp;销&nbsp;&nbsp;价： <span class="txt1">￥50.00</span>  爱玛价： <span class="txt2">￥58.00</span></li>
-            <li>一周成交：<span class="txt3">1390件</span></li>
+            <li class="title"><c:out value="${sessionScope.product.name}" /></li>
+            <li>促&nbsp;&nbsp;销&nbsp;&nbsp;价： <span class="txt1">￥${sessionScope.product.price}</span>  爱玛价： <span class="txt2">￥58.00</span></li>
+            <li>一周成交：<span class="txt3">${sessionScope.product.stock}件</span></li>
             <li>用户评论：<span>927&nbsp;条</span></li>
             <li>运&nbsp;&nbsp;&nbsp;&nbsp;费：<span class="txt4">满 138.00 元包邮，江浙沪 5 元，其它地区 9 元起</span><a href="#" class="txt5" title="">  更多&gt;&gt;</a></li>
             <li>购买10件以上，即享受 <a href="#" class="txt6" title="">团购优惠&gt;&gt;</a></li>
@@ -46,7 +48,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li class="txt7">颜色</li>
             <li class="txt8"><input name="" type="radio" checked="checked" />白色 [￥0.00元]</li>
             <li class="txt8"><input name="" type="radio" />黑色 [加￥10.00元]</li>
-            <li class="txt9"><input class="btn1" type="submit" value="" /></li>
+            <li class="txt9"><input id="cartButton" type="button" value="加入购物车" proId="${sessionScope.product.id}" /> 
+            <input class="btn1" type="submit" value=""/></li>
         </ul>
         </form>
     </div>
@@ -61,7 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </ul>
                 <ul class="con_ul">
                     <li><a href="" title=""><img src="images/product_pic2.jpg" alt="产品图片" /></a></li>
-                    <li class="left_name"><a href="#" title="">圆钻石结婚戒指雪ddddddddddddddddddddddddddddddddddddd花款</a></li>
+                    <li class="left_name"><a href="#" title="">圆钻石结婚戒指雪花款</a></li>
                     <li class="left_price">单价：<span>￥999</span></li>
                 </ul> 
                 <ul class="con_ul">
@@ -71,17 +74,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </ul>
                 <ul class="con_ul">
                     <li><a href="" title=""><img src="images/product_pic2.jpg" alt="产品图片" /></a></li>
-                    <li class="left_name"><a href="#" title="">圆钻石结婚戒指雪ddddddddddddddddddddddddddddddddddddd花款</a></li>
+                    <li class="left_name"><a href="#" title="">圆钻石结婚戒指雪花款</a></li>
                     <li class="left_price">单价：<span>￥999</span></li>
                 </ul> 
                 <ul class="con_ul">
                     <li><a href="" title=""><img src="images/product_pic2.jpg" alt="产品图片" /></a></li>
-                    <li class="left_name"><a href="#" title="">圆钻石结婚戒指雪ddddddddddddddddddddddddddddddddddddd花款</a></li>
+                    <li class="left_name"><a href="#" title="">圆钻石结婚戒指雪花款</a></li>
                     <li class="left_price">单价：<span>￥999</span></li>
                 </ul> 
                 <ul class="con_ul">
                     <li><a href="" title=""><img src="images/product_pic2.jpg" alt="产品图片" /></a></li>
-                    <li class="left_name"><a href="#" title="">圆钻石结婚戒指雪ddddddddddddddddddddddddddddddddddddd花款</a></li>
+                    <li class="left_name"><a href="#" title="">圆钻石结婚戒指雪花款</a></li>
                     <li class="left_price">单价：<span>￥999</span></li>
                 </ul>                                 
             </div>           

@@ -2,7 +2,7 @@ package com.vic.dao.page;
 
 import java.util.List;
 
-import com.vic.entity.Page;
+import com.vic.util.Page;
 
 public interface PageDao<T> {
 	/**

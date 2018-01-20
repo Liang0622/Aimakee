@@ -14,7 +14,7 @@
     	</c:choose>
     	</span></li>
         <li class="my_icon" onmouseover="view_account()"><a href="user.jsp">我的爱玛客<span id="my_icon"></span></a></li>
-        <li class=""><a href="flow_cart.jsp">购物车</a></li>
+        <li class=""><a href="toCart">购物车</a></li>
         <li class=""><a href="#">网站联盟</a></li>
         <li class="map"><a href="#">网站地图</a></li>
     </ul>

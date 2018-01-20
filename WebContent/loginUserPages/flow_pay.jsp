@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
@@ -37,22 +38,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <tr>
                     <th>商品名称</th>
                     <th>属性</th>
-                    <th>市场价</th>
+                    <!-- <th>市场价</th> -->
                     <th>本店价</th>
                     <th>购买数量</th>
                     <th>小计</th>
                 </tr>
-                <tr>
-                    <td><a class="red_a" href="goods.php?id=23" target="_blank" class="f6">诺基亚N96</a></td>
+                <c:forEach items="${sessionScope.shoppingCart.items}" var="item">
+                	<tr>
+                    <td><a class="red_a" href="goods.php?id=23" target="_blank" class="f6">${item.product.name}</a></td>
                     <td>颜色:黑色</td>
-                    <td>￥4440.00元</td>
-                    <td>￥3700.00元</td>
-                    <td>1</td>
-                    <td>￥3700.00元</td>
-                </tr>
-                <tr>
-                    <td colspan="6"> 购物金额小计 ￥3700.00元，比市场价 ￥4440.00元 节省了 ￥740.00元 (17%) </td>
-                </tr>
+                    <%-- <td>￥<span>${item.product.price}</span>元</td> --%>
+                    <td>￥<span>${item.product.price}</span>元</td>
+                    <td>${item.quantity}</td>
+                    <td>￥<span class="itemCost">${item.cost}</span>元</td>
+                	</tr>
+                </c:forEach>
             </table>
         </div>
         <div class="flowBox">
@@ -60,9 +60,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <table width="99%" align="center">
                 <tr>
                     <td class="align_left">收货人姓名:</td>
-                    <td class="align_left">fdsafdsa</td>
+                    <td class="align_left">${sessionScope.user.userName}</td>
                     <td class="align_left">电子邮件地址:</td>
-                    <td class="align_left">ybqbg@125.cm</td>
+                    <td class="align_left">${sessionScope.user.userEmail}</td>
                 </tr>
                 <tr>
                     <td class="align_left">详细地址:</td>
@@ -134,35 +134,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </tr>
             </table>
         </div>
-        <div class="flowBox">
-            <h6><span>支付方式</span></h6>
-            <table width="99%" align="center">
-                <tr>
-                    <th width="5%">&nbsp;</th>
-                    <th width="20%">名称</th>
-                    <th>订购描述</th>
-                    <th width="15%">手续费</th>
-                </tr>     
-                <tr>
-                    <td class="align_left"><input type="radio" name="payment" value="2"  isCod="0" onclick="selectPayment(this)" /></td>
-                    <th class="align_left">余额付款</th>
-                    <td class="align_left">使用账户余额支付。只有会员才能使用，通过设置信用额度，可以透支。</td>
-                    <td>￥0.00元</td>
-                </tr>
-                <tr>
-                    <td class="align_left"><input type="radio" name="payment" value="2"  isCod="0" onclick="selectPayment(this)" /></td>
-                    <th class="align_left">银行汇款/转帐</th>
-                    <td class="align_left">银行名称 收款人信息：全称 ××× ；帐号或地址 ××× ；开户行 ×××。 注意事项：办理电汇时，请在电汇单"汇款用途"一栏处注明您的订单号。</td>
-                    <td>￥0.00元</td>
-                </tr>                
-                <tr>   
-                    <td class="align_left"><input type="radio" name="payment" value="3"  isCod="1" onclick="selectPayment(this)" disabled="true"/></td>
-                    <td class="align_left"><strong>货到付款</strong></td>
-                    <td class="align_left">开通城市：××× 货到付款区域：×××</td>
-                    <td><span id="ECS_CODFEE">￥0.00元</span></td>
-                </tr>
-             </table>
-    	</div>
+        
         <div class="flowBox">
             <h6><span>费用总计</span></h6>
             <table width="99%" align="center">

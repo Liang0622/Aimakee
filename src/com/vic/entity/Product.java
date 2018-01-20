@@ -1,6 +1,10 @@
 package com.vic.entity;
 
-public class Product {
+import java.io.Serializable;
+
+import com.vic.util.Page;
+
+public class Product implements Serializable{
 	private int id;//商品编号
 	private String name;//商品名称
 	private String description;//商品描述

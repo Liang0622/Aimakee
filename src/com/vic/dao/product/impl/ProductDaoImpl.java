@@ -5,8 +5,8 @@ import java.util.List;
 
 import com.vic.dao.BaseDao;
 import com.vic.dao.product.ProductDao;
-import com.vic.entity.Page;
 import com.vic.entity.Product;
+import com.vic.util.Page;
 import com.vic.util.PageResultUtil;
 
 public class ProductDaoImpl extends BaseDao implements ProductDao {
@@ -60,5 +60,14 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
 		List<Product> products=PageResultUtil.eachResultSet(rs, Product.class);
 		this.closeAll();
 		return products;
+	}
+	@Override
+	public Product findProductById(int id) {
+		String sql="select * from easybuy_product where id=?";
+		Object[] params= {id};
+		rs=this.executeQuery(sql, params);
+		Product product=PageResultUtil.eachOneResultSet(rs, Product.class);
+		this.closeAll();
+		return product;
 	}
 }

@@ -11,10 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
-import com.vic.entity.Page;
 import com.vic.entity.Product;
 import com.vic.service.product.ProductService;
 import com.vic.service.product.impl.ProductServiceImpl;
+import com.vic.util.Page;
 @SuppressWarnings("serial")
 @WebServlet("/productShowByPageServlet")
 public class ProductShowByPageServlet extends HttpServlet {
@@ -55,7 +55,6 @@ public class ProductShowByPageServlet extends HttpServlet {
 		}
 		Gson gson=new Gson();
 		String json=gson.toJson(products);
-		System.out.println(json);
 		PrintWriter out=resp.getWriter();
 		out.print(json);
 		out.close();

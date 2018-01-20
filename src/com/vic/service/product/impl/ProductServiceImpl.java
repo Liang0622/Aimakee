@@ -4,9 +4,9 @@ import java.util.List;
 
 import com.vic.dao.product.ProductDao;
 import com.vic.dao.product.impl.ProductDaoImpl;
-import com.vic.entity.Page;
 import com.vic.entity.Product;
 import com.vic.service.product.ProductService;
+import com.vic.util.Page;
 
 public class ProductServiceImpl implements ProductService{
 	ProductDao pdi=new ProductDaoImpl();
@@ -31,6 +31,11 @@ public class ProductServiceImpl implements ProductService{
 	public int getAllProductCount() {
 		// TODO Auto-generated method stub
 		return pdi.getTotleCount();
+	}
+
+	@Override
+	public Product searchById(int id) {
+		return pdi.findProductById(id);
 	}
 
 }
